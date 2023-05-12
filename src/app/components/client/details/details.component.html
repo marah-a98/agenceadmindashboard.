@@ -1,0 +1,118 @@
+<div class="row">
+  <div class="col-4">
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="client">
+      <div class="card-body">
+        <h5 class="card-title">Details Client</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">First Name: {{client.firstname}} </li>
+          <li class="list-group-item">Last Name: {{client.lastname}} </li>
+          <li class="list-group-item">Email: {{client.email}} </li>
+          <li class="list-group-item">Password: {{client.password}} </li>
+          <li class="list-group-item">Mobile: {{client.mobile}} </li>
+          <li class="list-group-item">Age: {{client.age}}</li>
+        </ul>
+      </div>
+      <button type="button" class=" btn btn-primary rounded-pill" (click)="patchValue()" >Details </button>
+    </div>
+  </div>
+    <div class="col-4" *ngIf="hidden">
+    
+    <form [formGroup]="formClient" (ngSubmit)="updateClient(client,id)" >
+        <div class="form-group">
+      <div class="card-content">
+        <div class="card-body">
+           
+                <div class="form-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="first-name-icon"> First Name</label>
+                                <div class="position-relative">
+                                    <input type="text" class="form-control" formControlName="firstname" placeholder="Input with icon left">
+                                    <div class="form-control-icon">
+                                        <i class="bi bi-person"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="form-group has-icon-left">
+                                  <label for="first-name-icon"> Last Name</label>
+                                  <div class="position-relative">
+                                      <input type="text" class="form-control" formControlName="lastname" placeholder="Input with icon left" >
+                                      <div class="form-control-icon">
+                                          <i class="bi bi-person"></i>
+                                      </div>
+                                  </div>
+                              </div>
+                        </div>
+                        <div class="col-12">
+    
+                            <div class="form-group has-icon-left">
+                                <label for="email-id-icon">Email</label>
+                                <div class="position-relative">
+                                    <input type="text" class="form-control" formControlName="email" placeholder="Email" >
+                                    <div class="form-control-icon">
+                                        <i class="bi bi-envelope"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="mobile-id-icon">Mobile</label>
+                                <div class="position-relative">
+                                    <input type="text" class="form-control" formControlName="mobile" placeholder="Mobile" >
+                                    <div class="form-control-icon">
+                                        <i class="bi bi-phone"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group has-icon-left">
+                                <label for="password-id-icon">Password</label>
+                                <div class="position-relative">
+                                    <input type="password" class="form-control" formControlName="password" placeholder="Password">
+                                    <div class="form-control-icon">
+                                        <i class="bi bi-lock"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                        </div>
+                        <div class="col-12 d-flex justify-content-end">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </div>
+      </div>
+      
+      <button type="submit" class="btn btn-primary me-1 mb-1">Update Client</button>
+    </form>
+    </div>
+</div>
+
+
+
+      <!-- <div class="form-group">
+        <label for="exampleInputNom">Nom</label>
+        <input type="text" class="form-control" formControlName="nom"  placeholder="name">
+        
+      </div>
+      <div class="form-group">
+          <label for="exampleInputPrenom">Prenom</label>
+          <input type="text" class="form-control"  formControlName="prenom" placeholder="prenom">
+        </div>
+        
+        <div class="form-group">
+          <label for="exampleInputAge" >Age</label>
+          <input type="text" formControlName="age" placeholder="age" >
+        </div>
+        <button type="submit"  class="btn btn-primary"  >Update Agent </button>
+    </form>
+  </div>
+  </div> -->

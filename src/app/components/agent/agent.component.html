@@ -1,0 +1,96 @@
+<!-- 
+<form [formGroup]="formAgent" (ngSubmit)="saveAgent()" >
+    <div class="form-group">
+      <label for="exampleInputEmail1">name</label>
+      <input type="text" class="form-control" formControlName="nom"  placeholder="name">
+      
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">prenom</label>
+        <input type="text" class="form-control"  formControlName="prenom" placeholder="prenom">
+      </div>
+      <button type="submit"  class="btn btn-primary"  >Add Agent </button>
+  </form> -->
+  <h4>Add Agent</h4>
+<form [formGroup]="formAgent" (ngSubmit)="saveAgent()" > 
+    <div class="form-group">
+  <div class="card-content">
+    <div class="card-body">
+            <div class="form-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group has-icon-left">
+                            <label for="first-name-icon"> First Name</label>
+                            <div class="position-relative">
+                                <input type="text" class="form-control" formControlName="firstname" placeholder="First Name" id="first-name-icon">
+                                <div class="form-control-icon">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group has-icon-left">
+                            <label for="last-name-icon">Last Name</label>
+                            <div class="position-relative">
+                                <input type="text" class="form-control" formControlName="lastname" placeholder="Last Name" id="last-name-icon">
+                                <div class="form-control-icon">
+                                    <i class="bi bi-person"></i>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+
+                        <div class="form-group has-icon-left">
+                            <label for="email-id-icon">Email</label>
+                            <div class="position-relative">
+                                <input type="text" class="form-control" formControlName="email" placeholder="Email" id="email-id-icon">
+                                <div class="form-control-icon">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group has-icon-left">
+                            <label for="mobile-id-icon">Mobile</label>
+                            <div class="position-relative">
+                                <input type="text" class="form-control" formControlName="mobile" placeholder="Mobile" id="mobile-id-icon">
+                                <div class="form-control-icon">
+                                    <i class="bi bi-phone"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group has-icon-left">
+                            <label for="password-id-icon">Password</label>
+                            <div class="position-relative">
+                                <input type="password" class="form-control" formControlName="password" placeholder="Password" id="password-id-icon">
+                                <div class="form-control-icon">
+                                    <i class="bi bi-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                    </div>
+                    <div class="col-12 d-flex justify-content-end">
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+ </div>
+</div>
+ <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+</form>
+
+
+
+
+
+  <router-outlet></router-outlet>

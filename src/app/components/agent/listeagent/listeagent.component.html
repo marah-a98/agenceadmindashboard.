@@ -1,0 +1,43 @@
+<div class="form-group">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Search..."
+    [(ngModel)]="term"
+  />
+</div>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id </th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Mobaile</th>
+        <th scope="col">Password</th>
+        <th scope="col">action</th>
+
+        <th scope="cole"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let agent of agents | recherche: term | paginate: { itemsPerPage: 2, currentPage: p} 
+        ">
+
+        <th scope="row">{{agent.id}}</th>
+        <td>{{agent.firstname}}</td>
+        <td>{{agent.lastname}}</td>
+        <td>{{agent.email}}</td>
+        <td>{{agent.mobile}}</td>
+        <td>{{agent.password}}</td>
+        <td><button type="button" class="btn btn-primary" (click)="deleteFromAgentById(agent.id)">Delete</button></td>
+        <td><button type="button" class="btn btn-primary" routerLink="../detailagent/{{agent.id}}">View</button></td>
+       
+       
+      </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+
+

@@ -1,0 +1,75 @@
+<div class="row">
+     <div class="col-4">  
+
+       <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="hotel">
+               <div class="card-body">
+                       <h5 class="card-title">Details Hotel</h5>
+                       <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Nom: {{hotel.nom}} </li>
+                          <li class="list-group-item">Country:  {{hotel.contry}} </li>
+                          <li class="list-group-item">City:  {{hotel.city}} </li>
+                          <li class="list-group-item">Nobre Etoiles:  {{hotel.nombretoile}} </li>
+                       </ul>
+                 </div>
+                 <button type="button" class=" btn btn-primary rounded-pill" (click)="patchValue()" >Details </button>
+                 
+
+       </div>
+     </div>
+     <div class="col-3" *ngIf="hidden">
+        <form [formGroup]="formHotel" (ngSubmit)="updateHotel(id,hotel)" >
+            <div class="form-group">
+         <div class="card-body">
+           
+                <div class="form-body">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label>Nom</label>
+                    </div>
+                    <div class="col-md-8 form-group">
+                        <input type="text" id="nom-id" class="form-control" formControlName="nom" placeholder="Nom">
+                    </div>
+                        <div class="col-md-4">
+                            <label>Country</label>
+                        </div>
+                        <div class="col-md-8 form-group">
+                            <input type="text" id="contry-id" class="form-control" formControlName="contry" placeholder="Country">
+                        </div>
+                        <div class="col-md-4">
+                            <label>City</label>
+                        </div>
+                        <div class="col-md-8 form-group">
+                            <input type="text" id="city-id" class="form-control" formControlName="city" placeholder="City">
+                        </div>
+                        <div class="col-md-4">
+                            <label>Nombre Etoiles</label>
+                        </div>
+                        <div class="col-md-8 form-group">
+                            <input type="text" id="nmbretoile" class="form-control" name="nmbretoile" formControlName="nombretoile" placeholder="Nombre Etoiles">
+                        </div>
+                        <div class="col-sm-12 d-flex justify-content-end">
+                        </div>
+                    </div>
+                </div>
+         </div>
+         </div>
+         
+         <button type="submit" class="btn btn-primary me-1 mb-1">Update Hotel</button>
+        </form>
+     </div>
+</div>
+
+          
+
+
+        <!-- <div class="form-group">
+         <label for="exampleInputEmail1">nom</label>
+         <input type="text" class="form-control" id="exampleInputNom" formControlName="nom"  placeholder="name">
+        </div>
+         <div class="form-group">
+          <label for="exampleInputPassword1">Adress</label>
+           <input type="text" class="form-control" id="exampleInputAdress" formControlName="adress" placeholder="adress">
+        </div>
+            <button type="submit" class="btn btn-primary">Update Hotel</button> -->
+

@@ -1,0 +1,110 @@
+
+<div class="row">
+  <div class="col-4">
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="client">
+      <div class="card-body">
+        <h5 class="card-title">Details Billet </h5>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Check In: {{billet.checkin}} </li>
+          <li class="list-group-item">Check Out: {{billet.checkout}} </li>  
+          <li class="list-group-item">Destination: {{billet.destination}} </li>
+          <li class="list-group-item">Adulte: {{billet.adult}} </li>
+          <li class="list-group-item">Children: {{billet.children}} </li>
+          <li class="list-group-item">Room: {{billet.room}} </li>   
+        </ul>
+      </div>
+      <button type="button" class=" btn btn-primary rounded-pill" (click)="patchValue()" >Details </button>
+    </div>
+  </div>
+    <div class="col-4" *ngIf="hidden" >   
+    <form [formGroup]="formBillet" (ngSubmit)="updateBillet(billet,id)" >
+      
+      <div class="form-group">
+
+      <div class="col-md-4 col-md-pull-7">
+        <div class="booking-form">
+      
+        
+        <span class="form-label">Your Destination</span>
+        <input class="form-control" formControlName="destination" placeholder="Enter a destination or hotel name">
+        </div>
+        <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="startDate">Check In</label>
+            <input id="startDate" class="form-control" formControlName="checkin" type="date" />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="stopDate">Check Out</label>
+            <input id="stopDate" class="form-control" formControlName="checkout" type="date" />
+          </div>
+        </div>
+        <div class="row">
+        <div class="col-sm-4">
+        <div class="form-group">
+        <label class="form-label">Rooms:
+        <select class="form-control" formControlName="room">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        </select>
+        </label>
+        <span class="select-arrow"></span>
+        </div>
+        </div>
+        <div class="col-sm-4">
+        <div class="form-group">
+        <label class="form-label"> Adults:
+        <select class="form-control" formControlName="adult">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        </select>
+      </label>
+      
+    
+        <span class="select-arrow"></span>
+        </div>
+        </div>
+        <div class="col-sm-4">
+        <div class="form-group">
+        <label class="form-label"> Children:
+        <select class="form-control" formControlName="children">
+    
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        </select>
+    
+        </label>
+        <span class="select-arrow"></span>
+        </div>
+        </div>
+        </div>
+        <div class="form-btn">
+        <button class="submit-btn">Check availability</button>
+        </div>
+      <!-- <div class="form-group">
+        <label for="startDate">Date de Reservation</label>
+        <input id="startDate" class="form-control" formControlName="datereservation" type="date" />
+      </div>
+      <div class="form-group">
+          <label for="text">Destination</label>
+          <input type="text" class="form-control" id="exampleInputPasswo" formControlName="destination" placeholder="destination">
+        </div> -->
+       <button type="submit" class="btn btn-primary"> Update Billet </button>
+  </div>
+       
+        </div>
+      </div>
+    </form>
+    </div>
+</div>
+
+
+
+
